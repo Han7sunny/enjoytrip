@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 // import HomeView from "../views/HomeView.vue";
 import AppMain from "@/views/AppMain";
+import AppLogin from "@/views/AppLogin";
 
 Vue.use(VueRouter);
 
@@ -22,16 +23,19 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
-    path: "/user",
-    name: "user",
+    path: "/user/login",
+    name: "login",
+    component: () => import("@/views/AppLogin"),
+  },
+  {
+    path: "/user/join",
+    name: "join",
+    component: () => import("@/views/AppJoin"),
+  },
+  {
+    path: "/user/myPage",
+    name: "myPage",
     component: () => import("@/views/AppUser"),
-    children: [
-      {
-        path: "/login",
-        name: "login",
-        component: () => import("@/components/user/TheLogin"),
-      },
-    ],
   },
 ];
 

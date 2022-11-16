@@ -23,7 +23,7 @@
               <li>
                 <router-link :to="{ name: 'join' }">회원가입</router-link>
               </li>
-              <!-- </c:if> -->
+              <!-- </c:if> -> v-if로 변경 -->
               <li>
                 <router-link to="${root}/community">커뮤니티</router-link>
               </li>
@@ -33,7 +33,7 @@
                 <router-link :to="{ name: 'myPage' }">마이페이지</router-link>
               </li>
               <li>
-                <router-link :to="{ name: 'logout' }">로그아웃</router-link>
+                <a @click="logout">로그아웃</a>
               </li>
               <!-- </c:if> -->
             </ul>
@@ -62,7 +62,7 @@ export default {
         .get("/user/logout")
         .then((data) => {
           alert(data);
-          location.href = "/";
+          this.$router.push({ name: "main" });
         })
         .catch((err) => {
           location.href = "@/views/alert_page/error.jsp"; // 추후 변경
@@ -78,9 +78,10 @@ export default {
 /* @import "@/assets/images/icon/logo_color_symbol_1.png"; */
 
 @import "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css";
-@import "https://fonts.googleapis.com";
+
+/* @import "https://fonts.googleapis.com";
 @import "https://fonts.gstatic.com";
-@import "https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"; */
 
 @import "@/assets/fonts/icomoon/style.css";
 @import "@/assets/fonts/flaticon/font/flaticon.css";

@@ -96,7 +96,7 @@
 <script>
 import http from "@/util/HttpCommon";
 export default {
-  name: "TheLogin",
+  name: "UserLogin",
   data() {
     return {
       userId: null,
@@ -132,7 +132,7 @@ export default {
           console.log(typeof data);
           if (typeof data != Boolean) {
             //window.sessionStorage.setItem("userInfo", data);
-            location.href = "/";
+            this.$router.push({ name: "main" });
           } else {
             document.querySelector(".alert").textContent =
               "아이디 또는 비밀번호 확인 후 다시 로그인해주세요.";
