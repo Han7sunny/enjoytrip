@@ -1,5 +1,5 @@
 <template>
-  <body>
+  <div>
     <div class="site-mobile-menu site-navbar-target">
       <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close">
@@ -50,7 +50,7 @@
         </div>
       </div>
     </nav>
-  </body>
+  </div>
 </template>
 
 <script>

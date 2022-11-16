@@ -107,32 +107,12 @@
 
 <script>
 // document.write(new Date().getFullYear());
-// import bootstrap from "@/assets/js/bootstrap.bundle.min.js";
-// import tinySlider from "@/assets/js/tiny-slider.js";
-// import aos from "@/assets/js/aos.js";
-// import navbar from "@/assets/js/navbar.js";
-// import counter from "@/assets/js/counter.js";
-// import custom from "@/assets/js/custom.js";
+
 // https://www.npmjs.com/package/vue-plugin-load-script -? try?
 
 export default {
   name: "TheFooter",
-  mounted() {
-    let scripts = [
-      "/js/bootstrap.bundle.min.js",
-      "/js/tiny-slider.js",
-      "/js/aos.js",
-      "/js/navbar.js",
-      "/js/counter.js",
-      "/js/custom.js",
-    ];
-
-    scripts.forEach((script_src) => {
-      let externalScript = document.createElement("script");
-      externalScript.setAttribute("src", script_src);
-      document.head.appendChild(externalScript);
-    });
-  },
+  mounted() {},
 };
 </script>
 
